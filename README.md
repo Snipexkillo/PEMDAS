@@ -6,7 +6,7 @@ Division\
 Addition\
 Subtraction<br>
 This is a basic order of operations calculator where one inputs a String and it goes through order of operations and this solves it\
-Eventually will branch into a legit scientific calculator and eventually a graphing one (like a TI-84 plus)\
+Eventually will branch into a legit scientific calculator and possibly a graphing calculator (such as a TI-84 plus)\
 If anyone has any changes/advice feel free to email me or make a pull request because there is probably a much better way to write this
 
 # Usage
