@@ -7,7 +7,7 @@ Addition\
 Subtraction<br>
 This is a basic order of operations calculator where one inputs a String and it goes through order of operations and this solves it\
 Eventually will branch into a legit scientific calculator and eventually a graphing one (like a TI-84 plus)\
-If anyone has any changes/advice feel free to because there is probably an easier way to write this
+If anyone has any changes/advice feel free to email me or make a pull request because there is probably an easier way to write this
 
 # Usage
 This is just the class and it contains two constructors and 3 other visible methods (the 4th is private and used just for readability of code)\
