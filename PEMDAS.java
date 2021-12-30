@@ -6,9 +6,12 @@ public class PEMDAS {
 	public PEMDAS() {
 		equation = null;
 	}
+	public PEMDAS(String equation) {
+		this.equation = equation;
+	}
 	
-	public void setEquation(String input) {
-		equation = input;
+	public void setEquation(String equation) {
+		this.equation = equation;
 	}
 	
 	public String solveEquation(String equation) {
@@ -104,6 +107,9 @@ public class PEMDAS {
 	}
 	
 	public String solveEquation() {
+		if(equation==null) {
+			return null;
+		}
 		return this.solveEquation(equation);
 	}
 }
