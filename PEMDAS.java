@@ -60,10 +60,10 @@ public class PEMDAS {
 		}
 		
 		ArrayList<Character> addSubtractOrder = new ArrayList<Character>();
-		ArrayList<String> addSubtract = new ArrayList<String>(Arrays.asList(eq.split("\\+|-")));
+		ArrayList<String> addSubtract = new ArrayList<String>(Arrays.asList(eq.split("(?<=[0-9])-|\\+")));
 
-		for(int i = 0; i < eq.length() ;i++) {//adds all the + and - to the list in order
-			if(eq.charAt(i)=='+'||eq.charAt(i)=='-') {
+		for(int i = 1; i < eq.length()-1 ;i++) {//adds all the + and - to the list in order
+			if(eq.charAt(i)=='+'||(eq.charAt(i)=='-'&& eq.charAt(i-1)>47 && eq.charAt(i-1)<58)) {
 
 				addSubtractOrder.add(eq.charAt(i));
 				
@@ -73,7 +73,7 @@ public class PEMDAS {
 			addSubtract.set(i, multiplyDivide(addSubtract.get(i)));
 		}
 		while(addSubtract.size()>1) {//goes through the numbers one by one and does the operations
-			
+			System.out.println(addSubtract.get(0));
 			if(addSubtractOrder.get(0)=='+') {
 				addSubtract.set(0, String.valueOf(Double.valueOf(addSubtract.get(0))+Double.valueOf(addSubtract.get(1))));
 			}else {
@@ -90,7 +90,7 @@ public class PEMDAS {
 		ArrayList<String> multiplyDivide = new ArrayList<String>(Arrays.asList(eq.split("\\*|/")));
 		ArrayList<Character> multiplyDivideOrder = new ArrayList<Character>();
 		for(int i = 0; i < eq.length() ;i++) {//adds all the * and / to the list in order
-			if(eq.charAt(i)<'0') {
+			if(eq.charAt(i)=='/'||eq.charAt(i)=='*') {
 				multiplyDivideOrder.add(eq.charAt(i));
 			}
 		}
